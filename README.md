@@ -45,7 +45,7 @@ WAFPASS’s ultimate goal is to present a solution for promoting security system
 
   To get a list of all options and switches use:
   
-      $ python wapfass.py
+      $ python3 wapfass.py
 
 
 ## Support:
