@@ -31,7 +31,7 @@ WAFPASS’s ultimate goal is to present a solution for promoting security system
 ## Installation:
   Download WAFPASS by cloning the Git repository:
   
-      $ git clone https://github.com/hamedeasy/wafpassproject.git
+      $ git clone https://github.com/wafpassproject/wafpass.git
 
 
 ## Supported Platforms:
@@ -52,3 +52,8 @@ WAFPASS’s ultimate goal is to present a solution for promoting security system
 
     WAFPASS is the project of many hours of work and total personal dedication.
     WAFPASS’s ultimate goal is to promote the dev
+
+## Questions?
+
+Contact [me](mailto:hamedizadi@gmail.com)
+ 
