@@ -18,6 +18,8 @@ WAFPASS Analysing parameters with all payloads' bypass methods, aiming at benchm
    Today a great number of website owners around the globe use “Web Application Firewalls” to improve their security. However, these security applications suffer from many deficits such as poor performance, lack of updates, and so forth. Thus, they are hindered from working effectively against everyday attacks that are equipped with cutting edge technological innovations. This vulnerability can cause various issues and even lead to security failures.
    
    WAFPASS’s ultimate goal is to present a solution for promoting security systems like WAF in addition to providing a general overview of the security solutions.  
+   
+   
 
 
 ## Requirements:
@@ -47,6 +49,13 @@ WAFPASS Analysing parameters with all payloads' bypass methods, aiming at benchm
   To get a list of all options and switches use:
   
       $ python3 wapfass.py
+      
+      
+  You can add your payloads in /payloads/payloads.csv like this:
+  
+      payload@description
+  
+  
 
 
 ## Support:
