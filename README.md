@@ -54,6 +54,7 @@ WAFPASS Analysing parameters with all payloads' bypass methods, aiming at benchm
       $ wafpass.py3 -u URL [-a USERAGENT] [-d DELAY] [-r] [-x PROXY] [-p POST] [-c COOKIE]
 
 optional arguments:
+
 -a USERAGENT, --useragent USERAGENT      Set custom user-agent string
 
 -d DELAY, --delay DELAY                  Set delay between requests (secends)
