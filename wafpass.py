@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # Name:         WAFPASS
-# Purpose:      analyzing parameters with all payloads' bypass methods, aiming 
+# Purpose:      Analysing parameters with all payloads' bypass methods, aiming 
 #               at benchmarking security solutions like WAF
 # Author:       Hamed izadi - hamedizadi@gmail.com
 # Created:      09/02/2017
