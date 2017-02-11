@@ -21,7 +21,7 @@ import sys
 import time
 
 def main():
-    parser = argparse.ArgumentParser(add_help=False, description='WAFPASS.py - Analysing parameters with all payloads\' bypass methods, aiming at benchmarking security solutions like WAF. by Hamed Izadi @hezd')
+    parser = argparse.ArgumentParser(description='WAFPASS.py - Analysing parameters with all payloads\' bypass methods, aiming at benchmarking security solutions like WAF. by Hamed Izadi @hezd')
     required = parser.add_argument_group('required arguments')
     required.add_argument('-u', '--url', help='Target URL (http://www.example.com/page.php?parameter=value)', required=True)
     parser.add_argument('-a', '--useragent', help='Set custom user-agent string')
