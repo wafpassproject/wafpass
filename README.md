@@ -39,9 +39,9 @@ WAFPASS Analysing parameters with all payloads' bypass methods, aiming at benchm
 
 ## Supported Platforms:
 
-    Linux
-    Mac OS X
-    Windows
+- Linux
+- Mac OS X
+- Windows
 
 
 ## Usage:
@@ -58,8 +58,8 @@ WAFPASS Analysing parameters with all payloads' bypass methods, aiming at benchm
       
 ## Support:
 
-    WAFPASS is the project of many hours of work and total personal dedication.
-    Please help us to improve this project.
+WAFPASS is the project of many hours of work and total personal dedication.
+Please help us to improve this project.
 
 ## Questions?
 
