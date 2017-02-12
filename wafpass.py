@@ -175,7 +175,6 @@ def main():
         payloads[k] = v
     #PayloadstoDic
 
-
     for name_m, value_m in param_list.items():
         print ("\r\n<Parameter Name> " , name_m , "\r\n")
 
@@ -210,8 +209,10 @@ def main():
                         if des == 1:
                             req = requests.get(base_url, params=param_list, headers=headers, proxies=proxies, timeout=10)
                         else:
+                            base_url = domain
                             base_url = base_url + '/'.join(param_list.values())
                             req = requests.get(base_url, headers=headers, proxies=proxies, timeout=10)
+                            base_url = domain
                     r.raise_for_status()
                     if (str(req.status_code)[0] == "2") or (str(req.status_code)[0] == "1") or (req.status_code == 404):
                         del req.headers["Content-Length"]
