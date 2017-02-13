@@ -171,8 +171,8 @@ def main():
     f = open('payloads/payloads.csv', 'r')
     payloads = {}
     for line in f:
-        k, v = line.split('@')
-        payloads[k] = v
+        param_split = line.rpartition('@')
+        payloads[param_split[0]] = param_split[2]
     #PayloadstoDic
 
     for name_m, value_m in param_list.items():
@@ -215,8 +215,7 @@ def main():
                             base_url = domain
                     r.raise_for_status()
                     if (str(req.status_code)[0] == "2") or (str(req.status_code)[0] == "1") or (req.status_code == 404):
-                        del req.headers["Content-Length"]
-                        if not ((req.status_code == req_header_attack.status_code) and (len('/'.join(req.headers.values())) == len('/'.join(req_header_attack.headers.values()))) and (header_changed == 1)):
+                        if not ((req.status_code == req_header_attack.status_code) and (int(len('/'.join(req.headers.values())) - int(len(req.headers.get('content-type')))) == len('/'.join(req_header_attack.headers.values()))) and (header_changed == 1)):
                             string = string[:-1]
                             print (" ✔ [", string, "][", payload,"] --> "  , "<successful> Response Status: "+str(req.status_code)+"\n\r", end="")
                             succ = succ + 1
