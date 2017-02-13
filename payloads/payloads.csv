@@ -264,3 +264,249 @@ $2f%2f{target}%2f%2f@redirect injection
 ":test"@JSON_Fuzzing
 "\"\\/Date(1335205592410)\\/\""@JSON_Fuzzing
 "\"\\/Date(-1)\\/\""@JSON_Fuzzing
+<script></script>@XSS Keys
+<script>@XSS Keys
+<@XSS Keys
+<>@XSS Keys
+>@XSS Keys
+(@XSS Keys
+)@XSS Keys
+()@XSS Keys
+""@XSS Keys
+123<234@SQLi Keys
+9928!=1239@SQLi Keys
+abc'@SQLi Keys
+abc"@SQLi Keys
+or@SQLi Keys
+and@SQLi Keys
+'test'@XSS Keys
+''@SQLi Keys
+'abc'@SQLi Keys
+abc' --@SQLi Keys
+=@SQLi Keys
+>=@SQLi Keys
+<=@SQLi Keys
+between@SQLi Keys
+like@SQLi Keys
+order@SQLi Keys
+by@SQLi Keys
+ORDER/**/BY@SQLi Keys
+having@SQLi Keys
+||@SQLi Keys
+&&@SQLi Keys
+#@SQLi Keys
+/*@SQLi Keys
+union@SQLi Keys
+uNioN@SQLi Keys
+uN/**/ioN@SQLi Keys
+select@SQLi Keys
+seLeCt@SQLi Keys
+seL/**/eCt@SQLi Keys
+union select@SQLi Keys
+union/**/select@SQLi Keys
+uNion(sElect)@SQLi Keys
+union all select@SQLi Keys
+union/**/all/**/select@SQLi Keys
+uNion all(sElect)@SQLi Keys
+insert@SQLi Keys
+values@SQLi Keys
+update@SQLi Keys
+delete@SQLi Keys
+waitfor()@SQLi Keys
+waitfor@SQLi Keys
+sleep(2)@SQLi Keys
+WAITFOR DELAY@SQLi Keys
+benchmark()@SQLi Keys
+information_schema@SQLi Keys
+table_name@SQLi Keys
+column_name@SQLi Keys
+if@SQLi Keys
+else@SQLi Keys
+IF() select@SQLi Keys
+case()@SQLi Keys
+limit@SQLi Keys
+char()@SQLi Keys
+cast()@SQLi Keys
+convert()@SQLi Keys
+isnull()@SQLi Keys
+substring()@SQLi Keys
+concat()@SQLi Keys
+hex()@SQLi Keys
+unhex()@SQLi Keys
+avg()@SQLi Keys
+count()@SQLi Keys
+min()@SQLi Keys
+sum()@SQLi Keys
+JOIN@SQLi Keys
+@@version@SQLi Keys
+user@SQLi Keys
+drop@SQLi Keys
+load_file()@SQLi Keys
+extractvalue()@SQLi Keys
+0x633A5C626F6F742E696E69@SQLi Keys
+%55nion(%53elect 1,2,3)@SQLi Keys
+uni%0bon+se%0blect@SQLi Keys
+REVERSE(noinu) REVERSE(tceles)@SQLi Keys
+/*--*/union/*--*/select/*--*/@SQLi Keys
+union distinct select@SQLi Keys
+niOn distiNct sElect@SQLi Keys
+<!--@SQLi Keys
+alert(1)@XSS Keys
+console.log(1)@XSS Keys
+prompt(1)@XSS Keys
+FSCommand@XSS Keys
+onAbort@XSS Keys
+onActivate@XSS Keys
+onAfterPrint@XSS Keys
+onAfterUpdate@XSS Keys
+onBeforeActivate@XSS Keys
+onBeforeCopy@XSS Keys
+onBeforeCut@XSS Keys
+onBeforeDeactivate@XSS Keys
+onBeforeEditFocus@XSS Keys
+onBeforePaste@XSS Keys
+onBeforePrint@XSS Keys
+onBeforeUnload@XSS Keys
+onBeforeUpdate@XSS Keys
+onBegin@XSS Keys
+onBlur@XSS Keys
+onBounce@XSS Keys
+onCellChange@XSS Keys
+onChange@XSS Keys
+onClick@XSS Keys
+onContextMenu@XSS Keys
+onControlSelect@XSS Keys
+onCopy@XSS Keys
+onCut@XSS Keys
+onDataAvailable@XSS Keys
+onDataSetChanged@XSS Keys
+onDataSetComplete@XSS Keys
+onDblClick@XSS Keys
+onDeactivate@XSS Keys
+onDrag@XSS Keys
+onDragEnd@XSS Keys
+onDragLeave@XSS Keys
+onDragEnter@XSS Keys
+onDragOver@XSS Keys
+onDragDrop@XSS Keys
+onDragStart@XSS Keys
+onDrop@XSS Keys
+onEnd@XSS Keys
+onError@XSS Keys
+onErrorUpdate@XSS Keys
+onFilterChange@XSS Keys
+onFinish@XSS Keys
+onFocus@XSS Keys
+onFocusIn@XSS Keys
+onFocusOut@XSS Keys
+onHashChange@XSS Keys
+onHelp@XSS Keys
+onInput@XSS Keys
+onKeyDown@XSS Keys
+onKeyPress@XSS Keys
+onKeyUp@XSS Keys
+onLayoutComplete@XSS Keys
+onLoad@XSS Keys
+onLoseCapture@XSS Keys
+onMediaComplete@XSS Keys
+onMediaError@XSS Keys
+onMessage@XSS Keys
+onMouseDown@XSS Keys
+onMouseEnter@XSS Keys
+onMouseLeave@XSS Keys
+onMouseMove@XSS Keys
+onMouseOut@XSS Keys
+onMouseOver@XSS Keys
+onMouseUp@XSS Keys
+onMouseWheel@XSS Keys
+onMove@XSS Keys
+onMoveEnd@XSS Keys
+onMoveStart@XSS Keys
+onOffline@XSS Keys
+onOnline@XSS Keys
+onOutOfSync@XSS Keys
+onPaste@XSS Keys
+onPause@XSS Keys
+onPopState@XSS Keys
+onProgress@XSS Keys
+onPropertyChange@XSS Keys
+onReadyStateChange@XSS Keys
+onRedo@XSS Keys
+onRepeat@XSS Keys
+onReset@XSS Keys
+onResize@XSS Keys
+onResizeEnd@XSS Keys
+onResizeStart@XSS Keys
+onResume@XSS Keys
+onReverse@XSS Keys
+onRowsEnter@XSS Keys
+onRowExit@XSS Keys
+onRowDelete@XSS Keys
+onRowInserted@XSS Keys
+onScroll@XSS Keys
+onSeek@XSS Keys
+onSelect@XSS Keys
+onSelectionChange@XSS Keys
+onSelectStart@XSS Keys
+onStart@XSS Keys
+onStop@XSS Keys
+onStorage@XSS Keys
+onSyncRestored@XSS Keys
+onSubmit@XSS Keys
+onTimeError@XSS Keys
+onTrackChange@XSS Keys
+onUndo@XSS Keys
+onUnload@XSS Keys
+onURLFlip@XSS Keys
+onWheel@XSS Keys
+<img src=x>test</img>@XSS Keys
+<img dynsrc></img>@XSS Keys
+<img lowsrc></img>@XSS Keys
+<bgsound src=>@XSS Keys
+<iframe src=""></iframe>@XSS Keys
+<BR SIZE="&{alert(1)}">@XSS Keys
+<STYLE></STYLE>@XSS Keys
+<LINK REL="stylesheet" HREF="">@XSS Keys
+jav	ascript:alert(1);@XSS Keys
+" &#14; javascript:alert(1)"@XSS Keys
+<TABLE BACKGROUND="">@XSS Keys
+<TABLE><TD BACKGROUND="">@XSS Keys
+<DIV STYLE="background-image: url()">@XSS Keys
+&#106;&#97;&#118;&#97;@XSS Keys
+&#49;&#41;>@XSS Keys
+String.fromCharCode(88,83,83)@XSS Keys
+information_schema.tables@SQLi Keys
+information_schema.columns@SQLi Keys
+user()@SQLi Keys
+system_user()@SQLi Keys
+information_schema.schemata@SQLi Keys
+table_schema@SQLi Keys
+offset@SQLi Keys
+distinct@SQLi Keys
+@@hostname@SQLi Keys
+@@datadir@SQLi Keys
+offline@XSS Keys
+onbeforeonload@XSS Keys
+onbeforeprint@XSS Keys
+oncanplay@XSS Keys
+oncanplaythrough@XSS Keys
+ondurationchange@XSS Keys
+onemptied@XSS Keys
+onformchange@XSS Keys
+oninvalid@XSS Keys
+onloadeddata@XSS Keys
+onloadedmetadata@XSS Keys
+onloadstart@XSS Keys
+onpagehide@XSS Keys
+onpageshow@XSS Keys
+onplay@XSS Keys
+onplaying@XSS Keys
+onratechange@XSS Keys
+onseeked@XSS Keys
+onseeking@XSS Keys
+onsuspend@XSS Keys
+onwaiting@XSS Keys
+version()@SQLi Keys
+exec()@SQLi Keys
+onwheel@XSS Keys
+http://@XSS Keys
