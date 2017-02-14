@@ -291,7 +291,7 @@ def main():
     sum_req_fai = sum_req_fai / len(param_list)
  
     if sum_req_succ >=100:
-        print ("\n\r\n\r   ***No WAF detected!!!!!!\n\r")
+        print ("\n\r\n\r   ***No [Strong] WAF detected!!!!!!\n\r")
     if sum_req_fai >=100:
         print ("\n\r\n\r   ***The target seems to be behind a WAF\n\r")
 
