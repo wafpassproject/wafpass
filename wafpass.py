@@ -30,6 +30,7 @@ def main():
     parser.add_argument('-x', '--proxy', help='Set proxy (https://IP:PORT)')
     parser.add_argument('-p', '--post', help='Data string to be sent through POST (parameter=value&also=another)')
     parser.add_argument('-c', '--cookie', help='HTTP Cookie header')
+    parser.add_argument('-t', '--type', help='Type of payload [sqli | xss | others]', choices=['sql','xss','others','all'], default='all')
     if len(sys.argv)==1: parser.print_help(); sys.exit(0)
     args = parser.parse_args()
 
@@ -113,8 +114,8 @@ def main():
 
     #Header-cheking
     header_changed = 0
-    req_header = requests.head(url,headers=headers, proxies=proxies, timeout=10)
-    req_header_attack = requests.head(url, params={'test': '%00'}, headers=headers, proxies=proxies, timeout=10)
+    req_header = requests.head(url,headers=headers, proxies=proxies, timeout=1000000)
+    req_header_attack = requests.head(url, params={'test': '%00'}, headers=headers, proxies=proxies, timeout=1000000)
     if req_header_attack.status_code == req_header.status_code:
         if len('/'.join(req_header.headers.values())) != len('/'.join(req_header_attack.headers.values())):
             print ("\r\n\tThe server header is different when an attack is detected.\r\n")
@@ -167,12 +168,25 @@ def main():
         for param in paramp:
             parameters_equal(param)
 
-    #PayloadstoDic
-    f = open('payloads/payloads.csv', 'r')
+
     payloads = {}
-    for line in f:
-        param_split = line.rpartition('@')
-        payloads[param_split[0]] = param_split[2]
+    def file2dic (filename):
+        f = open(filename, 'r')
+        for line in f:
+            param_split = line.rpartition('@')
+            payloads[param_split[0]] = param_split[2]
+    #PayloadstoDic
+    if args.type == "xss":
+        file2dic ('payloads/XSS_Payloads.csv')
+    elif args.type == "sql":
+        file2dic ('payloads/SQLi_Payloads.csv')
+    elif args.type == "others":
+        file2dic ('payloads/other_Payloads.csv')
+    elif args.type == "all":
+        file2dic ('payloads/XSS_Payloads.csv')
+        file2dic ('payloads/SQLi_Payloads.csv')
+        file2dic ('payloads/other_Payloads.csv')
+
     #PayloadstoDic
 
     for name_m, value_m in param_list.items():
@@ -204,18 +218,18 @@ def main():
             for i in range(3):
                 try:
                     if args.post:
-                        req = requests.post(url, data=param_list, headers=headers, proxies=proxies, timeout=10)
+                        req = requests.post(url, data=param_list, headers=headers, proxies=proxies, timeout=1000000)
                     else:
                         if des == 1:
-                            req = requests.get(base_url, params=param_list, headers=headers, proxies=proxies, timeout=10)
+                            req = requests.get(base_url, params=param_list, headers=headers, proxies=proxies, timeout=1000000)
                         else:
                             base_url = domain
                             base_url = base_url + '/'.join(param_list.values())
-                            req = requests.get(base_url, headers=headers, proxies=proxies, timeout=10)
+                            req = requests.get(base_url, headers=headers, proxies=proxies, timeout=1000000)
                             base_url = domain
                     r.raise_for_status()
-                    if (str(req.status_code)[0] == "2") or (str(req.status_code)[0] == "1") or (req.status_code == 404):
-                        if not ((req.status_code == req_header_attack.status_code) and (int(len('/'.join(req.headers.values())) - int(len(req.headers.get('content-type')))) == len('/'.join(req_header_attack.headers.values()))) and (header_changed == 1)):
+                    if (str(req.status_code)[0] == "2") or (str(req.status_code)[0] == "1") or (req.status_code == 404):                
+                        if not ((req.status_code == req_header_attack.status_code) and (int(len('/'.join(req.headers.values())) - int(len(req.headers.get('content-type')))) == int(len('/'.join(req_header_attack.headers.values())))) and (header_changed == 1)):
                             string = string[:-1]
                             print (" ✔ [", string, "][", payload,"] --> "  , "<successful> Response Status: "+str(req.status_code)+"\n\r", end="")
                             succ = succ + 1
