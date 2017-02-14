@@ -67,4 +67,12 @@ Please help us to improve this project.
 ## Questions?
 
 Contact [me](mailto:hamedizadi@gmail.com)
+
+## Author
+
+Hamed Izadi
+
+## License
+
+[MIT](./LICENSE)
  
