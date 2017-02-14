@@ -231,7 +231,13 @@ def main():
                             base_url = domain
                     r.raise_for_status()
                     if (str(req.status_code)[0] == "2") or (str(req.status_code)[0] == "1") or (req.status_code == 404):
-                        len_req = int(len(''.join(req.headers.values())) - int(len(req.headers.get('Content-Length'))))
+
+
+                        if req.headers.get('Content-Length'):
+                            len_req = int(len(''.join(req.headers.values())) - int(len(req.headers.get('Content-Length'))))
+                        else:
+                            len_req = 1
+
                         if not ((req.status_code == req_header_attack.status_code) and (len_req == len_req_header_attack) and (header_changed == 1)):
                             string = string[:-1]
                             print (" ✔ [", string, "][", payload,"] --> "  , "<successful> Response Status: "+str(req.status_code)+"\n\r", end="")
