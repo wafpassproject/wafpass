@@ -260,7 +260,7 @@ def main():
                 continue
 
             rs.append(req.status_code) 
-            if trycount > 50:
+            if trycount > 150:
                 print ("\r\nSorry dude!, Check your internet connection or it appears you have been blocked!!!!!\r\nYou can use delay for the next try.")   
                 sys.exit()         
             #Send-Request
