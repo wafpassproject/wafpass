@@ -117,8 +117,8 @@ def main():
     req_header = requests.get(url,headers=headers, proxies=proxies, timeout=10)
     req_header_attack = requests.get(url, params={'test': '%00'}, headers=headers, proxies=proxies, timeout=10)
     if req_header_attack.status_code == req_header.status_code:
-        len_req_header = int(len(''.join(req_header.headers.values()))) - int(len(''.join(req_header.headers.get('Content-Length'))))
-        len_req_header_attack = int(len(''.join(req_header_attack.headers.values()))) - int(len(''.join(req_header.headers.get('Content-Length'))))
+        len_req_header = int(len(''.join(req_header.headers.values()))) - int(len(req_header.headers.get('Content-Length')))
+        len_req_header_attack = int(len(''.join(req_header_attack.headers.values()))) - int(len(req_header.headers.get('Content-Length')))
         if len_req_header != len_req_header_attack :
             print ("\r\n\tThe server header is different when an attack is detected.\r\n")
             header_changed = 1
@@ -231,7 +231,7 @@ def main():
                             base_url = domain
                     r.raise_for_status()
                     if (str(req.status_code)[0] == "2") or (str(req.status_code)[0] == "1") or (req.status_code == 404):
-                        len_req = int(len(''.join(req.headers.values())) - int(len(''.join(req.headers.get('Content-Length')))))
+                        len_req = int(len(''.join(req.headers.values())) - int(len(req.headers.get('Content-Length'))))
                         if not ((req.status_code == req_header_attack.status_code) and (len_req == len_req_header_attack) and (header_changed == 1)):
                             string = string[:-1]
                             print (" ✔ [", string, "][", payload,"] --> "  , "<successful> Response Status: "+str(req.status_code)+"\n\r", end="")
