@@ -54,7 +54,7 @@ WAFPASS Analysing parameters with all payloads' bypass methods, aiming at benchm
    
    
    
-  You can add your payloads in /payloads/payloads.csv like this:
+  You can add your payloads in /payloads/*.csv like this:
   
       payload@description
       
