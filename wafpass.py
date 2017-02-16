@@ -105,7 +105,7 @@ def main():
 
     #upordown
     try:
-        r = requests.head(domain, proxies=proxies, headers=headers, timeout=20)
+        r = requests.get(domain, proxies=proxies, headers=headers, allow_redirects=False, timeout=20)
         r.raise_for_status()
     except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
         print ("\r\nTarget appears to be down!!\r\n")
@@ -114,11 +114,11 @@ def main():
 
     #Header-cheking
     header_changed = 0
-    req_header = requests.get(url,headers=headers, proxies=proxies, timeout=10)
-    req_header_attack = requests.get(url, params={'test': '%00'}, headers=headers, proxies=proxies, timeout=10)
+    req_header = requests.get(url,headers=headers, proxies=proxies, allow_redirects=False, timeout=10)
+    req_header_attack = requests.get(url, params={'test': '%00'}, headers=headers, proxies=proxies, allow_redirects=False, timeout=10)
     if req_header_attack.status_code == req_header.status_code:
         len_req_header = int(len(''.join(req_header.headers.values()))) - int(len(req_header.headers.get('Content-Length')))
-        len_req_header_attack = int(len(''.join(req_header_attack.headers.values()))) - int(len(req_header.headers.get('Content-Length')))
+        len_req_header_attack = int(len(''.join(req_header_attack.headers.values()))) - int(len(req_header_attack.headers.get('Content-Length')))
         if len_req_header != len_req_header_attack :
             print ("\r\n\tThe server header is different when an attack is detected.\r\n")
             header_changed = 1
@@ -220,14 +220,14 @@ def main():
             for i in range(3):
                 try:
                     if args.post:
-                        req = requests.post(url, data=param_list, headers=headers, proxies=proxies, timeout=10)
+                        req = requests.post(url, data=param_list, headers=headers, proxies=proxies, allow_redirects=False, timeout=10)
                     else:
                         if des == 1:
-                            req = requests.get(base_url, params=param_list, headers=headers, proxies=proxies, timeout=10)
+                            req = requests.get(base_url, params=param_list, headers=headers, proxies=proxies, allow_redirects=False, timeout=10)
                         else:
                             base_url = domain
                             base_url = base_url + '/'.join(param_list.values())
-                            req = requests.get(base_url, headers=headers, proxies=proxies, timeout=10)
+                            req = requests.get(base_url, headers=headers, proxies=proxies, allow_redirects=False, timeout=10)
                             base_url = domain
                     r.raise_for_status()
                     if (str(req.status_code)[0] == "2") or (str(req.status_code)[0] == "1") or (req.status_code == 404):
