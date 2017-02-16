@@ -117,8 +117,17 @@ def main():
     req_header = requests.get(url,headers=headers, proxies=proxies, allow_redirects=False, timeout=10)
     req_header_attack = requests.get(url, params={'test': '%00'}, headers=headers, proxies=proxies, allow_redirects=False, timeout=10)
     if req_header_attack.status_code == req_header.status_code:
-        len_req_header = int(len(''.join(req_header.headers.values()))) - int(len(req_header.headers.get('Content-Length')))
-        len_req_header_attack = int(len(''.join(req_header_attack.headers.values()))) - int(len(req_header_attack.headers.get('Content-Length')))
+
+        if req_header.headers.get('Content-Length'):
+            len_req_header = int(len(''.join(req_header.headers.values()))) - int(len(req_header.headers.get('Content-Length')))
+        else:
+            len_req_header = int(len(''.join(req_header.headers.values())))
+
+        if req_header_attack.headers.get('Content-Length'):
+            len_req_header_attack = int(len(''.join(req_header_attack.headers.values()))) - int(len(req_header_attack.headers.get('Content-Length')))
+        else:
+            len_req_header_attack = int(len(''.join(req_header_attack.headers.values())))
+
         if len_req_header != len_req_header_attack :
             print ("\r\n\tThe server header is different when an attack is detected.\r\n")
             header_changed = 1
