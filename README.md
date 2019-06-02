@@ -72,7 +72,8 @@ Contact [me](mailto:hamedizadi@gmail.com)
 
 Hamed Izadi 
 
-A Special Thanks To<\br>
+A Special Thanks To
+
 [Hamed Hosseini](mailto:hamedhoseini3@gmail.com) 
 
 ## License
