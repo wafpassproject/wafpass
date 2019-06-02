@@ -70,7 +70,10 @@ Contact [me](mailto:hamedizadi@gmail.com)
 
 ## Author
 
-Hamed Izadi
+Hamed Izadi 
+
+A Special Thanks To…
+[Hamed Hosseini](mailto:hamedhoseini3@gmail.com) 
 
 ## License
 
